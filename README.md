@@ -1,2 +1,2 @@
-# JavaApplication
+# Java
 Projects Java
