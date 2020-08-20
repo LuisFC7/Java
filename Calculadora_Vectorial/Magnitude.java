@@ -6,12 +6,14 @@ public class Magnitude{
 	
 	public void  Magnitude(double x, double y){
 		
+		DecimalFormat limit = new DecimalFormat("#.0000");
 		mag = Math.sqrt((x*x) + (y*y));
 		dir1 = x / mag;
 		dir2 = y / mag;
 
-		System.out.println("\nMagnitude = "+mag);
-		System.out.println("\nDirection = "+dir1);
+		System.out.println( limit.format(mag));
+		System.out.println("\nDirection = " + dir1 " );
+	
 
 
 	}
