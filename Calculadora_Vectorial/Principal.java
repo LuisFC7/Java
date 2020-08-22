@@ -11,7 +11,7 @@ public class Principal{
 
 		Vector3d choose1 = new Vector3d();
 		
-		System.out.println("Choose an option: \n1. Magnitude and Direction of Vector\n");
+		System.out.println("\nChoose an option: \n1. Magnitude and Direction of Vector\n");
 		option = input.nextInt();
 
 		switch(option){

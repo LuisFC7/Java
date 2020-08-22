@@ -17,6 +17,16 @@ public class Vector3d{
 				c2 = input.nextDouble();
 				option1.Magnitude(c1, c2);
 
+				break;
+
+			case 2: System.out.println("\nEnter coordinates: ");
+				c1 = input.nextDouble();
+				c2 = input.nextDouble();
+				c3 = input.nextDouble();
+				option1.Magnitude(c1, c2, c3);
+
+				break;
+
 		}
 
 	
