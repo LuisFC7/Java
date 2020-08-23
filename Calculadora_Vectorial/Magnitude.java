@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.text.DecimalFormat;//class to limit decimal number to print
+import java.text.DecimalFormat; //class to limit decimal number to print
 
 public class Magnitude{
 	
@@ -16,9 +16,9 @@ public class Magnitude{
 		dir1 = x / mag;
 		dir2 = y / mag;
 
-		System.out.println("\nMagnitude = "limit.format(mag));
-		System.out.println("\nDirection = " + dir1 + "i (+) " + dir2 + "j\n" );
-		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main Menu\n");
+		System.out.println("\nMagnitude = "+limit.format(mag));
+		System.out.println("\nDirection = " + limit.format(dir1) + "i (+) " +limit.format(dir2)+ "j\n" );
+		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main Menu\n3. Close calculator\n");
 		mainmenu = input.nextInt();
 
 		switch(mainmenu){
@@ -26,6 +26,8 @@ public class Magnitude{
 			case 1: again.decision1();
 				break;
 			case 2: Principal.main(null);
+				break;
+			case 3: System.exit(0);
 				break;
 
 		}
@@ -39,14 +41,16 @@ public class Magnitude{
 		dir2 = y / mag;
 		dir3 = z / mag;
 
-		System.out.println("\nMagnitude = "limit.format(mag));
-		System.out.println("\nDirection = " + dir1 + "i (+) " + dir2 + "j (+) " + dir3 + "z");
-		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main menu\n");
+		System.out.println("\nMagnitude = "+limit.format(mag));
+		System.out.println("\nDirection = " + limit.format(dir1) + "i (+) " + limit.format(dir1) + "j (+) " + limit.format(dir3) + "z");
+		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main menu\n3. Close Calculator\n");
 		mainmenu = input.nextInt();
 		switch(mainmenu){
 			case 1: again.decision1();
 				break;
 			case 2: Principal.main(null);
+				break;
+			case 3: System.exit(0);
 				break;
 
 		}
