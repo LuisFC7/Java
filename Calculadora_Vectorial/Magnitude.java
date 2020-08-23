@@ -21,7 +21,7 @@ public class Magnitude{
 
 		switch(mainmenu){
 			
-			case 1: Principal();
+			case 1: Principal.main(null);
 				break;
 			case 2: again.decision1();
 				break;
@@ -39,8 +39,15 @@ public class Magnitude{
 
 		System.out.println("\nMagnitude = "+mag);
 		System.out.println("\nDirection = " + dir1 + "i (+) " + dir2 + "j (+) " + dir3 + "z");
+		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main menu\n");
 
+		switch(mainmenu){
+			case 1: Principal.main(null);
+				break;
+			case 2: again.decision1();
+				break;
 
+		}
 
 	}
 
