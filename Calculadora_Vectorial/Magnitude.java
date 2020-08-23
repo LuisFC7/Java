@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;//class to limit decimal number to print
 
 public class Magnitude{
 	
@@ -7,6 +8,7 @@ public class Magnitude{
 
 	Scanner input = new Scanner(System.in);
 	Vector3d again = new Vector3d();
+	DecimalFormat limit = new DecimalFormat("#.0000");
 
 	public void  Magnitude(double x, double y){
 		
@@ -14,7 +16,7 @@ public class Magnitude{
 		dir1 = x / mag;
 		dir2 = y / mag;
 
-		System.out.println("\nMagnitude = "+mag);
+		System.out.println("\nMagnitude = "limit.format(mag));
 		System.out.println("\nDirection = " + dir1 + "i (+) " + dir2 + "j\n" );
 		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main Menu\n");
 		mainmenu = input.nextInt();
@@ -37,7 +39,7 @@ public class Magnitude{
 		dir2 = y / mag;
 		dir3 = z / mag;
 
-		System.out.println("\nMagnitude = "+mag);
+		System.out.println("\nMagnitude = "limit.format(mag));
 		System.out.println("\nDirection = " + dir1 + "i (+) " + dir2 + "j (+) " + dir3 + "z");
 		System.out.println("\nType for\n1. Magnitude and direction of vector.\n2. Main menu\n");
 		mainmenu = input.nextInt();
