@@ -2,7 +2,7 @@ import java.util.Scanner;
 class Compare{
 	
 	public void Compare(int x, int y, int z, int x1, int y1, int z1){
-	
+		int com1,com2,com3;
 		String f,s,t,f1,s1,t1;
 		f = x.toString();
 		s = y.toString();
@@ -10,14 +10,11 @@ class Compare{
 		f1 = x1.toString();
 		s1 = y1.toString();
 		t1 = z1.toString();
+		com1 = f.equals(f1);
+		com2 = s.equals(s1);
+		com3 = t.equals(t1);
 
-		if( (f.equals(f1)) && (s.equals(s1)) && (t.equals(t1)) )
-				{	
-					System.out.println("\n Vectors are equals");
-				}else{
-
-					System.out.println("\n Vectors are not equals");
-				}
+		
 	
 
 
