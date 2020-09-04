@@ -1,28 +1,31 @@
+//this program compare two vectors using toString and equals method
 import java.util.Scanner;
 class Compare{
-	
+	int x,y,z,x1,y1,z1;
+		
 	public void Compare(int x, int y, int z, int x1, int y1, int z1){
-		int com1,com2,com3;
+		boolean com1,com2,com3;
 		String f,s,t,f1,s1,t1;
-		f = x.toString();
-		s = y.toString();
-		t = z.toString();
-		f1 = x1.toString();
-		s1 = y1.toString();
-		t1 = z1.toString();
+		//now we have to convert integer to String
+		f = Integer.toString(x);
+		s = Integer.toString(y);
+		t = Integer.toString(z);
+		f1 = Integer.toString(x1);
+		s1 = Integer.toString(y1);
+		t1 = Integer.toString(z1);
 		com1 = f.equals(f1);
 		com2 = s.equals(s1);
 		com3 = t.equals(t1);
 
+		if(com1 && com2 && com3 == true)
+		{
+			System.out.println("\nVectors are equal\n");
+		}else{
+			System.out.println("\nVectors are not equal\n");
 		
-	
-
+		}
 
 	}
-
-
-
-
 }
 class Principal{
 
@@ -43,9 +46,6 @@ class Principal{
 	
 	vector1.Compare(x,y,z,x1,y1,z1);
 
-
-
 	}
-
 
 }
