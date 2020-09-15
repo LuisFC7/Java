@@ -1,0 +1,19 @@
+
+class Person{
+
+	private String Nombre;
+	private String Direccion;
+	private String Date;
+	private String Sexo;
+
+	public void Person(String Nombre, String Direccion, String Date, String sexo){
+
+		
+
+
+	}
+
+
+
+
+}
