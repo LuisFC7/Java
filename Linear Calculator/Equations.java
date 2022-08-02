@@ -60,14 +60,12 @@ public class Equations{
 
 		if(Arrays.equals(e1,e2)){
 			System.out.println("Infinidad de soluciones");
+		}else if(e1[0]==e2[0] && e1[1]==e2[1] && e1[2]!=e2[2]){
+			System.out.println("Sistema sin solucion");
 		}else{
-			//aqui llamar otra funcion
 			Calculo(ar1,ar2);
-		}
+		}	
 			
-		
-
-
 	}
 	
 }
