@@ -9,6 +9,7 @@ public class Principal{
 	System.out.println("\nLinear Algebra");
 	System.out.println("Choose an option");
 	System.out.println("1. Equations 2x2");
+	System.out.println("2. Gauss Method");
 	choose=input.nextInt();
 	//Aqui se definen los objetos para construccion de app
 	//Ecuaciones lineales con 2 incognitas
@@ -17,6 +18,10 @@ public class Principal{
 		case 1:{
 			       opt1.Equation1();
 			       break;
+		}
+		case 2:{
+				opt1.Gaussnxn();
+
 		}
 		default:{
 

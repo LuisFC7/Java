@@ -67,5 +67,64 @@ public class Equations{
 		}	
 			
 	}
+
+	//OPERACIONES PARA GAUSS JORDAN
+	//esta funcion sera recursiva
+	public void OperacionesGauss(double matriz[][], int a, int b, int c){
+		double id;
+		int band=0;
+		double []arr=new double[b];
+		if(c<a){
+			for(int i=0; i<1; i++){
+				for(int j=0; j<b; j++){
+					id=matriz[i+c][0];
+					arr[j]=matriz[i][j];
+					matriz[i][j]=matriz[i][j]*(-id);
+				}
+			}
+			for(int i=0; i<1; i++){
+				for(int j=0; j<b; j++){
+					matriz[i+c][j]=matriz[i][j]+matriz[i+c][j];
+					matriz[i][j]=arr[j];
+				}
+
+			}
+			band++;
+			c++;
+			OperacionesGauss(matriz,a,b,c);
+
+		}else{
+
+			for(int i=0; i<a; i++){
+				for(int j=0; j<b; j++){
+					System.out.print(matriz[i][j]+"\t");
+				}
+				System.out.println();
+			}
+		}
+			
+
+		
+
+		
+
+	}
+	public void CalculoGauss(double matriz[][], int a, int b){
+		double id1;
+		double id2=1;
+		int c=1;
+
+		if(matriz[0][0]>1){
+			id1=matriz[0][0];
+			for(int i=0; i<1; i++){
+				for(int j=0; j<b; j++){
+					id2=matriz[i+1][0];
+					matriz[i][j]=(matriz[i][j]/id1);
+				}
+			}
+			OperacionesGauss(matriz,a,b,c);
+		}
+
+	}
 	
 }
