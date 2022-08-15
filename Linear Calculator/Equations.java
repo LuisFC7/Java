@@ -69,11 +69,23 @@ public class Equations{
 	}
 
 	//OPERACIONES PARA GAUSS JORDAN
+	
+	public void Imprimir(double matriz[][], int a, int b){
+
+		for(int i=0; i<a; i++){
+			for(int j=0; j<b; j++){
+				System.out.println(matriz[i][j]+"\t");
+			}
+			System.out.println();
+		}
+
+	}
 	//esta funcion sera recursiva
-	public void OperacionesGauss(double matriz[][], int a, int b, int c){
+	public void OperacionesGauss(double matriz[][], int a, int b, int c, int idi){
 		double id;
-		int band=0;
+		int id2=idi;
 		double []arr=new double[b];
+		//Donde c representa el numero de filas
 		if(c<a){
 			for(int i=0; i<1; i++){
 				for(int j=0; j<b; j++){
@@ -89,28 +101,31 @@ public class Equations{
 				}
 
 			}
-			band++;
 			c++;
-			OperacionesGauss(matriz,a,b,c);
+			id2=0;
+			OperacionesGauss(matriz,a,b,c,id2);
 
 		}else{
+			id2++;
 
-			for(int i=0; i<a; i++){
-				for(int j=0; j<b; j++){
-					System.out.print(matriz[i][j]+"\t");
+			double iden=matriz[c-a+1][id2];
+			//aqui se hace la operacion de llevar a uno el pivote de cada renglon
+			for(int i=c-a+1; i<c-a+2; i++){
+				for(int j=1; j<b; j++){
+
+					System.out.println("iden: "+iden);
+					matriz[i][j]=matriz[i][j]/iden;
+					System.out.println("i :"+i);
 				}
-				System.out.println();
 			}
+			Imprimir(matriz,a,b);
+				
 		}
 			
-
-		
-
-		
-
 	}
 	public void CalculoGauss(double matriz[][], int a, int b){
 		double id1;
+		int in=0;
 		double id2=1;
 		int c=1;
 
@@ -122,7 +137,7 @@ public class Equations{
 					matriz[i][j]=(matriz[i][j]/id1);
 				}
 			}
-			OperacionesGauss(matriz,a,b,c);
+			OperacionesGauss(matriz,a,b,c,in);
 		}
 
 	}
